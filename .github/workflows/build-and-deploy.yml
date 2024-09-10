@@ -9,8 +9,8 @@ on:
 env:
   REGISTRY: ghcr.io
   APP_IMAGE_NAME: lrydzkowski/container-experiments
-  CONTAINER_APP_NAME: container-experiments-ca
-  RESOURCE_GROUP_NAME: r-systems-experiments-rg
+  AZURE_CONTAINER_APP_NAME: container-experiments-ca
+  AZURE_RESOURCE_GROUP_NAME: r-systems-experiments-rg
   
 jobs:
   build:
@@ -84,10 +84,11 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-      - name: Build and deploy Container App
-        uses: azure/container-apps-deploy-action@v1
+      - name: Deploy to Azure Container App
+        uses: azure/CLI@v1
         with:
-          acrName: ${{ env.REGISTRY }}
-          containerAppName: ${{ env.CONTAINER_APP_NAME }}
-          resourceGroup: ${{ env.RESOURCE_GROUP_NAME }}
-          imageToDeploy: ${{ env.APP_IMAGE_NAME }}:latest
+          inlineScript: |
+            az containerapp update \
+              --name ${{ env.AZURE_CONTAINER_APP_NAME }} \
+              --resource-group ${{ env.AZURE_RESOURCE_GROUP_NAME }} \
+              --image ${{ env.APP_IMAGE_NAME }}:latest

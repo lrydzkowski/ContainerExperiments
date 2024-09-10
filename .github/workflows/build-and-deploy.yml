@@ -87,7 +87,7 @@ jobs:
       - name: Build and deploy Container App
         uses: azure/container-apps-deploy-action@v1
         with:
-          acrName: env.REGISTRY
-          containerAppName: env.CONTAINER_APP_NAME
-          resourceGroup: env.RESOURCE_GROUP_NAME
-          imageToDeploy: ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:latest
+          acrName: ${{ env.REGISTRY }}
+          containerAppName: ${{ env.CONTAINER_APP_NAME }}
+          resourceGroup: ${{ env.RESOURCE_GROUP_NAME }}
+          imageToDeploy: ${{ env.APP_IMAGE_NAME }}:latest

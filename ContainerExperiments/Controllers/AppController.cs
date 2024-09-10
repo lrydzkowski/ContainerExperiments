@@ -9,11 +9,13 @@ public class AppController : ControllerBase
     [HttpGet]
     public IActionResult Get()
     {
-        return Ok(
-            new
-            {
-                AppName = "ContainerExperiments"
-            }
-        );
+        return Ok(new { AppName = "ContainerExperiments" });
+    }
+
+    [HttpGet]
+    [Route("test")]
+    public IActionResult Test()
+    {
+        return Ok(new { AppName = "ContainerExperiments Test" });
     }
 }

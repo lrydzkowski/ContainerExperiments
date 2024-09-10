@@ -3,7 +3,12 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments", "ContainerExperiments\ContainerExperiments.csproj", "{3003853E-A919-4AC8-8E53-8C97C288964C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerExperiments", "ContainerExperiments\ContainerExperiments.csproj", "{3003853E-A919-4AC8-8E53-8C97C288964C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{EFCE26F8-E7D2-44E0-8BBC-8CFBFDFBA3A7}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

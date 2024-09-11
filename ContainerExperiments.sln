@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Ac
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
 		.github\workflows\build-and-deploy2.yml = .github\workflows\build-and-deploy2.yml
+		.github\workflows\build-and-deploy3.yml = .github\workflows\build-and-deploy3.yml
 	EndProjectSection
 EndProject
 Global

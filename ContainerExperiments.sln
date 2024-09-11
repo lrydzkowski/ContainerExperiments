@@ -8,6 +8,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{EFCE26F8-E7D2-44E0-8BBC-8CFBFDFBA3A7}"
 	ProjectSection(SolutionItems) = preProject
 		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
+		.github\workflows\build-and-deploy2.yml = .github\workflows\build-and-deploy2.yml
 	EndProjectSection
 EndProject
 Global

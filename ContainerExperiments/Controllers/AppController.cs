@@ -16,6 +16,6 @@ public class AppController : ControllerBase
     [Route("test")]
     public IActionResult Test()
     {
-        return Ok(new { AppName = "ContainerExperiments Test 3" });
+        return Ok(new { AppName = "ContainerExperiments Test 4" });
     }
 }

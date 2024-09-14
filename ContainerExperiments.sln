@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerExperiments", "Con
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{EFCE26F8-E7D2-44E0-8BBC-8CFBFDFBA3A7}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build-and-deploy.yml = .github\workflows\build-and-deploy.yml
+		.github\workflows\build-and-deploy1.yml = .github\workflows\build-and-deploy1.yml
 		.github\workflows\build-and-deploy2.yml = .github\workflows\build-and-deploy2.yml
 		.github\workflows\build-and-deploy3.yml = .github\workflows\build-and-deploy3.yml
 	EndProjectSection

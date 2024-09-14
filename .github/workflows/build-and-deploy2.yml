@@ -9,8 +9,8 @@ on:
 env:
   REGISTRY: ghcr.io
   APP_IMAGE_NAME: lrydzkowski/container-experiments2
-  AZURE_CONTAINER_APP_NAME: container-experiments2-ca
-  AZURE_RESOURCE_GROUP_NAME: r-systems-experiments-rg
+  AZURE_CONTAINER_APP_NAME: r-systems-experiment2-dev-ca
+  AZURE_RESOURCE_GROUP_NAME: r-systems-dev-rg
   
 jobs:
   build:

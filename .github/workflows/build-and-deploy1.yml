@@ -91,4 +91,4 @@ jobs:
             az containerapp update \
               --name ${{ env.AZURE_CONTAINER_APP_NAME }} \
               --resource-group ${{ env.AZURE_RESOURCE_GROUP_NAME }} \
-              --image ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:latest
+              --image ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:${{ env.VERSION_TAG }}

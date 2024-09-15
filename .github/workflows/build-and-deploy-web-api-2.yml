@@ -1,4 +1,4 @@
-name: Build and Deploy 2
+name: Build and Deploy Web API 2
 
 on:
   push:
@@ -55,7 +55,7 @@ jobs:
         uses: docker/build-push-action@v4
         with:
           context: .
-          file: ${{ DOCKER_FILE_PATH }}
+          file: ${{ env.DOCKER_FILE_PATH }}
           push: true
           tags: ${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:latest,${{ env.REGISTRY }}/${{ env.APP_IMAGE_NAME }}:${{ env.VERSION_TAG }}
 

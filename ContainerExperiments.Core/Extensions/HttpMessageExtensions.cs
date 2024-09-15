@@ -7,6 +7,11 @@ namespace ContainerExperiments.Core.Extensions;
 
 public static class HttpMessageExtensions
 {
+    private static readonly JsonSerializerOptions Options = new()
+    {
+        PropertyNamingPolicy = JsonNamingPolicy.CamelCase
+    };
+
     public static async Task ThrowIfNotSuccessAsync(
         this HttpResponseMessage response,
         HttpStatusCode expectedHttpStatusCode = HttpStatusCode.OK
@@ -32,13 +37,7 @@ public static class HttpMessageExtensions
     public static async Task<T?> GetResponseAsync<T>(this HttpResponseMessage response)
     {
         string message = await response.Content.ReadAsStringAsync();
-        T? payload = JsonSerializer.Deserialize<T>(
-            message,
-            new JsonSerializerOptions
-            {
-                PropertyNamingPolicy = JsonNamingPolicy.CamelCase
-            }
-        );
+        T? payload = JsonSerializer.Deserialize<T>(message, Options);
 
         return payload;
     }

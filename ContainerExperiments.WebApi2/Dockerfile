@@ -26,5 +26,6 @@ RUN dotnet publish "./ContainerExperiments.WebApi2.csproj" -c $BUILD_CONFIGURATI
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENV ASPNETCORE_URLS https://*:8086
+EXPOSE 8086
+ENV ASPNETCORE_URLS http://*:8086
 ENTRYPOINT ["dotnet", "ContainerExperiments.WebApi2.dll"]

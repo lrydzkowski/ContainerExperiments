@@ -1,10 +1,16 @@
+using ContainerExperiments.WebApi1.Client;
+using ContainerExperiments.WebApi2.Client;
+
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureWebApi1ClientServices(builder.Configuration);
+builder.Services.ConfigureWebApi2ClientServices(builder.Configuration);
 
 WebApplication app = builder.Build();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

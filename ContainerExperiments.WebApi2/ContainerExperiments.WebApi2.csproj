@@ -1,17 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>b12c0224-e2d7-447a-a0c7-58ebc4d0b654</UserSecretsId>
+    <UserSecretsId>03757687-d978-400f-a69c-9f5f1f526569</UserSecretsId>
     <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <DockerfileRunArguments>-p 8086:8086</DockerfileRunArguments>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ContainerExperiments.WebApi1.Client\ContainerExperiments.WebApi1.Client.csproj" />
+    <ProjectReference Include="..\ContainerExperiments.WebApi3.Client\ContainerExperiments.WebApi3.Client.csproj" />
   </ItemGroup>
 
 </Project>

@@ -3,14 +3,26 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.11.35208.52
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContainerExperiments", "ContainerExperiments\ContainerExperiments.csproj", "{3003853E-A919-4AC8-8E53-8C97C288964C}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHub Actions", "GitHub Actions", "{EFCE26F8-E7D2-44E0-8BBC-8CFBFDFBA3A7}"
 	ProjectSection(SolutionItems) = preProject
-		.github\workflows\build-and-deploy1.yml = .github\workflows\build-and-deploy1.yml
-		.github\workflows\build-and-deploy2.yml = .github\workflows\build-and-deploy2.yml
-		.github\workflows\build-and-deploy3.yml = .github\workflows\build-and-deploy3.yml
+		.github\workflows\build-and-deploy-web-api-1.yml = .github\workflows\build-and-deploy-web-api-1.yml
+		.github\workflows\build-and-deploy-web-api-2.yml = .github\workflows\build-and-deploy-web-api-2.yml
+		.github\workflows\build-and-deploy-web-api-3.yml = .github\workflows\build-and-deploy-web-api-3.yml
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi1", "ContainerExperiments.WebApi1\ContainerExperiments.WebApi1.csproj", "{D5679909-A72D-460D-A170-87A0C3565907}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi2", "ContainerExperiments.WebApi2\ContainerExperiments.WebApi2.csproj", "{F00E586F-5F82-4F7B-B45D-B4331A93DDB8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi3", "ContainerExperiments.WebApi3\ContainerExperiments.WebApi3.csproj", "{B28DB519-18A4-4505-85B5-D91FA2BBDE05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi1.Client", "ContainerExperiments.WebApi1.Client\ContainerExperiments.WebApi1.Client.csproj", "{2F2276B5-5C15-4131-9797-7A66DEC0FC50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.Core", "ContainerExperiments.Core\ContainerExperiments.Core.csproj", "{FE8B7790-8A8A-4E13-99C3-30CB3366664B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi2.Client", "ContainerExperiments.WebApi2.Client\ContainerExperiments.WebApi2.Client.csproj", "{2EC224A0-813E-4306-8DCF-CBA12B32BD7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ContainerExperiments.WebApi3.Client", "ContainerExperiments.WebApi3.Client\ContainerExperiments.WebApi3.Client.csproj", "{449CDAAF-B2F6-49E3-AE9B-B798C3BDA232}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,10 +30,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3003853E-A919-4AC8-8E53-8C97C288964C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3003853E-A919-4AC8-8E53-8C97C288964C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3003853E-A919-4AC8-8E53-8C97C288964C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3003853E-A919-4AC8-8E53-8C97C288964C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5679909-A72D-460D-A170-87A0C3565907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5679909-A72D-460D-A170-87A0C3565907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5679909-A72D-460D-A170-87A0C3565907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5679909-A72D-460D-A170-87A0C3565907}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F00E586F-5F82-4F7B-B45D-B4331A93DDB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F00E586F-5F82-4F7B-B45D-B4331A93DDB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F00E586F-5F82-4F7B-B45D-B4331A93DDB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F00E586F-5F82-4F7B-B45D-B4331A93DDB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B28DB519-18A4-4505-85B5-D91FA2BBDE05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B28DB519-18A4-4505-85B5-D91FA2BBDE05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B28DB519-18A4-4505-85B5-D91FA2BBDE05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B28DB519-18A4-4505-85B5-D91FA2BBDE05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F2276B5-5C15-4131-9797-7A66DEC0FC50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F2276B5-5C15-4131-9797-7A66DEC0FC50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F2276B5-5C15-4131-9797-7A66DEC0FC50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F2276B5-5C15-4131-9797-7A66DEC0FC50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FE8B7790-8A8A-4E13-99C3-30CB3366664B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE8B7790-8A8A-4E13-99C3-30CB3366664B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE8B7790-8A8A-4E13-99C3-30CB3366664B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE8B7790-8A8A-4E13-99C3-30CB3366664B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2EC224A0-813E-4306-8DCF-CBA12B32BD7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2EC224A0-813E-4306-8DCF-CBA12B32BD7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2EC224A0-813E-4306-8DCF-CBA12B32BD7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2EC224A0-813E-4306-8DCF-CBA12B32BD7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{449CDAAF-B2F6-49E3-AE9B-B798C3BDA232}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{449CDAAF-B2F6-49E3-AE9B-B798C3BDA232}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{449CDAAF-B2F6-49E3-AE9B-B798C3BDA232}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{449CDAAF-B2F6-49E3-AE9B-B798C3BDA232}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

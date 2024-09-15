@@ -1,3 +1,4 @@
+using ContainerExperiments.WebApi1;
 using ContainerExperiments.WebApi2.Client;
 using ContainerExperiments.WebApi3.Client;
 
@@ -6,6 +7,7 @@ WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.ConfigureWebApi1Services(builder.Configuration);
 builder.Services.ConfigureWebApi2ClientServices(builder.Configuration);
 builder.Services.ConfigureWebApi3ClientServices(builder.Configuration);
 

@@ -26,7 +26,7 @@ public class AppController : ControllerBase
             new
             {
                 App = "WebApi2",
-                Version = "1.0.0.0"
+                Version = "1.0.0.1"
             }
         );
     }

@@ -11,6 +11,7 @@ public static class DependencyInjection
     )
     {
         services.ConfigureOptions<VolumeMountOptions>(configuration, VolumeMountOptions.Position);
+        services.ConfigureOptions<TestOptions>(configuration, TestOptions.Position);
         services.AddScoped<IFileService, FileService>();
     }
 

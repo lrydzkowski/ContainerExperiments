@@ -1,6 +1,8 @@
 ﻿using ContainerExperiments.WebApi1.Models;
+using ContainerExperiments.WebApi1.Options;
 using ContainerExperiments.WebApi1.Services;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
 using AppInfoDto2 = ContainerExperiments.WebApi2.Client.Models.AppInfoDto;
 using AppInfoDto3 = ContainerExperiments.WebApi3.Client.Models.AppInfoDto;
 using IAppInfoService2 = ContainerExperiments.WebApi2.Client.Services.IAppInfoService;
@@ -16,18 +18,21 @@ public class AppController : ControllerBase
     private readonly IAppInfoService3 _appInfoService3;
     private readonly IFileService _fileService;
     private readonly ILogger<AppController> _logger;
+    private readonly TestOptions _options;
 
     public AppController(
         IAppInfoService2 appInfoService2,
         IAppInfoService3 appInfoService3,
         IFileService fileService,
-        ILogger<AppController> logger
+        ILogger<AppController> logger,
+        IOptions<TestOptions> options
     )
     {
         _appInfoService2 = appInfoService2;
         _appInfoService3 = appInfoService3;
         _fileService = fileService;
         _logger = logger;
+        _options = options.Value;
     }
 
     [HttpGet]
@@ -77,5 +82,16 @@ public class AppController : ControllerBase
         _logger.LogCritical("It's a critical log - {TestKey}", request.TestValue);
 
         return Ok();
+    }
+
+    [HttpGet("options")]
+    public IActionResult ShowOption()
+    {
+        return Ok(
+            new
+            {
+                Value = _options.TestKey1
+            }
+        );
     }
 }
